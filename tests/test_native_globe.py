@@ -61,12 +61,9 @@ class NativeGlobeTests(unittest.TestCase):
         for longitude,latitude in [(0,0),(110,20),(-100,40),(80,-35)]:
             with self.subTest(longitude=longitude,latitude=latitude):
                 pixel = self.render(longitude,latitude)[100,100,:3]
-                n = np.array([np.cos(np.deg2rad(latitude))*np.cos(np.deg2rad(longitude)),
-                              np.sin(np.deg2rad(latitude)),
-                              -np.cos(np.deg2rad(latitude))*np.sin(np.deg2rad(longitude))])
-                light = .42+.58*max(0,np.dot(n,np.array([-1,1,2])/np.sqrt(6)))
-                # GPU transcendental/texture precision: below 1/32 of one latitude texel.
-                np.testing.assert_allclose(pixel[:2]/light, [(longitude+180)/360,(latitude+90)/180],atol=1/360/32)
+                # The weather preview keeps the input RGB when the rim is disabled.
+                # Allow less than 1/32 of one latitude texel for GPU precision.
+                np.testing.assert_allclose(pixel[:2], [(longitude+180)/360,(latitude+90)/180],atol=1/360/32)
 
     def test_screen_right_is_east_and_screen_up_is_north(self):
         image = self.render(0,0)

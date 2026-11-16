@@ -1,0 +1,45 @@
+{
+  "schema": "earthstudio.pseudovis.proposal.v1",
+  "algorithm_id": "night-pseudovis-hybrid-v9-research",
+  "version": "research-20261027",
+  "enabled": false,
+  "required_ir_bands": [
+    "B07",
+    "B08",
+    "B09",
+    "B10",
+    "B11",
+    "B13",
+    "B15",
+    "B16"
+  ],
+  "input_units": "calibrated brightness temperature K on co-registered native grid",
+  "native_shape": [
+    5500,
+    5500
+  ],
+  "delivery_shape": [
+    11000,
+    11000
+  ],
+  "fixed_virtual_sun": {
+    "sza": 30,
+    "azimuth": -70
+  },
+  "weights_sha256": "e8a2e454fd86b81a1ab74087dc18fcf0f2019a9fa6321870f30b2c7f18de90e8",
+  "source_sha256": {
+    "reports/night_pseudovis_20261020T1520/infer_ai_full_disk_gpu.py": "1d8e55554536051e5297d442a8ec3aa26a05ce59f6fb48237942eb213375bf8d",
+    "reports/night_pseudovis_20261020T1520/render_full_disk_v9_11k.py": "5a3bffcd166a41ed964677551ee3f7b43d844f92d66d9aa9df5f69a8b4309056"
+  },
+  "pending_qualification": [
+    "per-scan UTC and native navigation adapter",
+    "same-scene baseline and tiled-seam checks",
+    "multi-hour and multiple-scene temporal checks",
+    "day/night terminator transition",
+    "land/cloud mask reference comparison",
+    "per-stage RAM/VRAM and 3-worker scheduling measurement",
+    "Blender asset and UTC independent reopen",
+    "separate recipe/version and human visual acceptance"
+  ],
+  "integration_status": "Prepared contract only; no model imported, no active recipe or queue changed"
+}
