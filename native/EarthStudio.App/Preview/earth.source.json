@@ -1,0 +1,19 @@
+{
+  "kind": "static cloud-free ground reference, NOT 2020 observations or cloud coverage",
+  "source_url": "https://assets.science.nasa.gov/content/dam/science/esd/eo/images/bmng/bmng-topography-bathymetry/october/world.topo.bathy.200410.3x5400x2700.jpg",
+  "documentation": "https://science.nasa.gov/earth/earth-observatory/blue-marble-next-generation/base-topography-bathymetry/",
+  "reference_month": "2004-10",
+  "width": 5400,
+  "height": 2700,
+  "native_ground_km": 8,
+  "projection": "EPSG:4326",
+  "extent_wsen": [
+    -180,
+    -90,
+    180,
+    90
+  ],
+  "bytes": 2459484,
+  "sha256": "f9ad745c780281dbfdda9769f10b161aacb0a03c83888ab24d4be16575aa4a7c",
+  "credit": "NASA Earth Observatory Blue Marble Next Generation"
+}

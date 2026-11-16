@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+bin/
+obj/
+.vs/
+.venv/
+Runtime/
+app/
+data/
+development_runtime.json
+protected_roots.json
+local_storage.json
+resources/cache/
+resources/performance/
+*.earthproj
+*.lnk
+*.log

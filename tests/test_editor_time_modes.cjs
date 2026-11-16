@@ -1,0 +1,25 @@
+const assert=require('node:assert/strict'),fs=require('node:fs');
+const T=require('../native/EarthStudio.App/Cesium/timeline.js'),S=require('../native/EarthStudio.App/Cesium/shots.js');
+const M=require('../native/EarthStudio.App/Cesium/montage.js'),B=require('../native/EarthStudio.App/Cesium/storyboard.js'),F=require('../native/EarthStudio.App/Cesium/frame-mapping.js');
+const p=JSON.parse(fs.readFileSync('reports/m6_continuity/fixture_storyboard_bundle.json')).timelineProject;
+p.fps=24;p.sourcePlayback={mode:'sequence',intervalSeconds:600};p.weather={startUtc:'2026-10-20T00:00:00Z',endUtc:'2026-10-30T00:00:00Z'};
+for(const t of p.tracks){delete t.clip;t.weather={...p.weather};}
+const [a,b,c]=p.tracks.map(t=>t.id),origin=Date.parse(p.weather.startUtc);
+assert.equal(Date.parse(T.weatherTime(p,1,a)),origin+24*600000);
+let q=B.setWeather(p,b,{mode:'mapped',startUtc:p.weather.startUtc,endUtc:'2026-10-20T01:00:00Z',curve:[[0,0],[.5,0],[1,1]]},T,S);
+assert.equal(T.weatherTime(q,T.duration(q,b)*.4,b),'2026-10-20T00:00:00.000Z');
+assert.equal(T.weatherTime(q,1,a),T.weatherTime(p,1,a));
+q=B.setWeather(q,c,{mode:'mapped',startUtc:p.weather.startUtc,endUtc:p.weather.startUtc},T,S);
+assert.equal(T.weatherTime(q,0,c),T.weatherTime(q,5,c));
+const keys=structuredClone(q.tracks[0].keys);q=M.trim(q,a,1,3,T,S);assert.deepEqual(q.tracks[0].keys,keys);
+const first=M.locate(q,0,T);assert.equal(first.sourceFrame,24);assert.equal(first.id,a);
+const next=M.locate(q,48,T);assert.equal(next.id,b);assert.equal(next.sourceFrame,0);
+assert.throws(()=>M.trim(q,a,3,1,T,S));assert.throws(()=>M.trim(q,a,-1,3,T,S));
+const changed=M.changeFps(q,30,T,S);assert.deepEqual(changed.tracks[0].clip,{inFrame:30,outFrame:90});assert.deepEqual(changed.tracks[0].keys,keys);
+assert.equal(T.isSequence(changed,b),false);
+const frames=Array.from({length:1500},(_,n)=>({utc:new Date(origin+n*600000).toISOString(),previewPath:`${n}.jpg`,missing:n===25}));
+const proof=F.receipt(q,frames,T,M,true);assert.equal(proof.frames[0].scanIndex,24);assert.equal(proof.frames[1].state,'missing');assert.equal(proof.frames[1].actualUtc,frames[24].utc);assert.equal(proof.frames[1].held,true);
+assert.equal(proof.frames[48].shot,b);assert.equal(proof.frames[48].scanIndex,0);
+const reordered=B.move(q,b,-1);assert.equal(M.locate(reordered,0,T).id,b);assert.deepEqual(reordered.tracks.find(t=>t.id===a),q.tracks[0]);
+fs.mkdirSync('reports/m14_editing',{recursive:true});fs.writeFileSync('reports/m14_editing/time_modes.json',JSON.stringify({passed:true,frames:proof.frames.length,modeIsolation:true,nonDestructiveTrim:true,halfOpenCuts:true,missingProvenance:true},null,2));
+console.log('PASS mixed clocks, hold with moving camera, frame-exact trim, fps change, ordering, per-frame gap provenance');

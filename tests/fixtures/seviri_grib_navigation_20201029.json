@@ -1,0 +1,233 @@
+[
+  {
+    "field": "cloud_top_height",
+    "source_file": "MSG4-SEVI-MSGCLTH-0100-0100-20201029163000.000000000Z-NA.grb",
+    "crs_wkt": "PROJCRS[\"unknown\",BASEGEOGCRS[\"unknown\",DATUM[\"unknown\",ELLIPSOID[\"unknown\",6378140,298.252981061492,LENGTHUNIT[\"metre\",1,ID[\"EPSG\",9001]]]],PRIMEM[\"Greenwich\",0,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8901]]],CONVERSION[\"unknown\",METHOD[\"Geostationary Satellite (Sweep Y)\"],PARAMETER[\"Longitude of natural origin\",0,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8802]],PARAMETER[\"Satellite Height\",35785830.098,LENGTHUNIT[\"metre\",1,ID[\"EPSG\",9001]]],PARAMETER[\"False easting\",0,LENGTHUNIT[\"metre\",1],ID[\"EPSG\",8806]],PARAMETER[\"False northing\",0,LENGTHUNIT[\"metre\",1],ID[\"EPSG\",8807]]],CS[Cartesian,2],AXIS[\"(E)\",east,ORDER[1],LENGTHUNIT[\"metre\",1,ID[\"EPSG\",9001]]],AXIS[\"(N)\",north,ORDER[2],LENGTHUNIT[\"metre\",1,ID[\"EPSG\",9001]]]]",
+    "native_area_extent": [
+      5567248.074173444,
+      5567248.074173444,
+      -5567248.074173444,
+      -5567248.074173444
+    ],
+    "shape": [
+      1237,
+      1237
+    ],
+    "xy": [
+      [
+        309,
+        618
+      ],
+      [
+        927,
+        618
+      ],
+      [
+        618,
+        309
+      ],
+      [
+        618,
+        927
+      ],
+      [
+        432,
+        494
+      ],
+      [
+        680,
+        494
+      ],
+      [
+        494,
+        804
+      ]
+    ],
+    "lon": [
+      333.6558467395861,
+      26.536777401332635,
+      0.09202373908769647,
+      0.0922034379748258,
+      344.45729709142813,
+      5.201278593182405,
+      349.51539335478435
+    ],
+    "lat": [
+      -0.08318723356991309,
+      -0.08321228726025648,
+      26.519094702132485,
+      -26.713000658045516,
+      10.174593408701806,
+      10.106434390504388,
+      -15.576318462621309
+    ],
+    "verification": {
+      "max_geolocation_error_deg": 2.504663143554353e-13,
+      "max_projection_residual_m": 2.561137080192566e-08,
+      "x_step_m": 9004.44073281463,
+      "y_step_m": -9004.089686596293,
+      "sample_count": 7,
+      "area_extent": [
+        -5560242.152513027,
+        -5578033.560846416,
+        5578251.033978669,
+        5560025.381473199
+      ],
+      "method": "Delivered ecCodes lon/lat fit; four construction samples plus three held-out samples; raw data order unchanged"
+    }
+  },
+  {
+    "field": "cloud_top_quality",
+    "source_file": "MSG4-SEVI-MSGCLTH-0100-0100-20201029163000.000000000Z-NA.grb",
+    "crs_wkt": "PROJCRS[\"unknown\",BASEGEOGCRS[\"unknown\",DATUM[\"unknown\",ELLIPSOID[\"unknown\",6378140,298.252981061492,LENGTHUNIT[\"metre\",1,ID[\"EPSG\",9001]]]],PRIMEM[\"Greenwich\",0,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8901]]],CONVERSION[\"unknown\",METHOD[\"Geostationary Satellite (Sweep Y)\"],PARAMETER[\"Longitude of natural origin\",0,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8802]],PARAMETER[\"Satellite Height\",35785830.098,LENGTHUNIT[\"metre\",1,ID[\"EPSG\",9001]]],PARAMETER[\"False easting\",0,LENGTHUNIT[\"metre\",1],ID[\"EPSG\",8806]],PARAMETER[\"False northing\",0,LENGTHUNIT[\"metre\",1],ID[\"EPSG\",8807]]],CS[Cartesian,2],AXIS[\"(E)\",east,ORDER[1],LENGTHUNIT[\"metre\",1,ID[\"EPSG\",9001]]],AXIS[\"(N)\",north,ORDER[2],LENGTHUNIT[\"metre\",1,ID[\"EPSG\",9001]]]]",
+    "native_area_extent": [
+      5567248.074173444,
+      5567248.074173444,
+      -5567248.074173444,
+      -5567248.074173444
+    ],
+    "shape": [
+      1237,
+      1237
+    ],
+    "xy": [
+      [
+        309,
+        618
+      ],
+      [
+        927,
+        618
+      ],
+      [
+        618,
+        309
+      ],
+      [
+        618,
+        927
+      ],
+      [
+        432,
+        494
+      ],
+      [
+        680,
+        494
+      ],
+      [
+        494,
+        804
+      ]
+    ],
+    "lon": [
+      333.6558467395861,
+      26.536777401332635,
+      0.09202373908769647,
+      0.0922034379748258,
+      344.45729709142813,
+      5.201278593182405,
+      349.51539335478435
+    ],
+    "lat": [
+      -0.08318723356991309,
+      -0.08321228726025648,
+      26.519094702132485,
+      -26.713000658045516,
+      10.174593408701806,
+      10.106434390504388,
+      -15.576318462621309
+    ],
+    "verification": {
+      "max_geolocation_error_deg": 2.504663143554353e-13,
+      "max_projection_residual_m": 2.561137080192566e-08,
+      "x_step_m": 9004.44073281463,
+      "y_step_m": -9004.089686596293,
+      "sample_count": 7,
+      "area_extent": [
+        -5560242.152513027,
+        -5578033.560846416,
+        5578251.033978669,
+        5560025.381473199
+      ],
+      "method": "Delivered ecCodes lon/lat fit; four construction samples plus three held-out samples; raw data order unchanged"
+    }
+  },
+  {
+    "field": "cloud_mask",
+    "source_file": "MSG4-SEVI-MSGCLMK-0100-0100-20201029163000.000000000Z-NA.grb",
+    "crs_wkt": "PROJCRS[\"unknown\",BASEGEOGCRS[\"unknown\",DATUM[\"unknown\",ELLIPSOID[\"unknown\",6378140,298.252981061492,LENGTHUNIT[\"metre\",1,ID[\"EPSG\",9001]]]],PRIMEM[\"Greenwich\",0,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8901]]],CONVERSION[\"unknown\",METHOD[\"Geostationary Satellite (Sweep Y)\"],PARAMETER[\"Longitude of natural origin\",0,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8802]],PARAMETER[\"Satellite Height\",35785830.098,LENGTHUNIT[\"metre\",1,ID[\"EPSG\",9001]]],PARAMETER[\"False easting\",0,LENGTHUNIT[\"metre\",1],ID[\"EPSG\",8806]],PARAMETER[\"False northing\",0,LENGTHUNIT[\"metre\",1],ID[\"EPSG\",8807]]],CS[Cartesian,2],AXIS[\"(E)\",east,ORDER[1],LENGTHUNIT[\"metre\",1,ID[\"EPSG\",9001]]],AXIS[\"(N)\",north,ORDER[2],LENGTHUNIT[\"metre\",1,ID[\"EPSG\",9001]]]]",
+    "native_area_extent": [
+      5567248.074173444,
+      5570248.477339261,
+      -5570248.477339261,
+      -5567248.074173444
+    ],
+    "shape": [
+      3712,
+      3712
+    ],
+    "xy": [
+      [
+        928,
+        1856
+      ],
+      [
+        2784,
+        1856
+      ],
+      [
+        1856,
+        928
+      ],
+      [
+        1856,
+        2784
+      ],
+      [
+        1299,
+        1484
+      ],
+      [
+        2041,
+        1484
+      ],
+      [
+        1484,
+        2412
+      ]
+    ],
+    "lon": [
+      333.56784561583464,
+      26.496365338077336,
+      0.030693374767299213,
+      0.030713361673955483,
+      344.429485517988,
+      5.117929546131331,
+      349.4677031700167
+    ],
+    "lat": [
+      -0.027725191345564417,
+      -0.02772797666550791,
+      26.607679746348133,
+      -26.672318020878325,
+      10.228047528772725,
+      10.158984961100547,
+      -15.456926736307118
+    ],
+    "verification": {
+      "max_geolocation_error_deg": 1.1368683772161603e-13,
+      "max_projection_residual_m": 6.984919309616089e-09,
+      "x_step_m": 3000.651563916976,
+      "y_step_m": -3000.5318263089566,
+      "sample_count": 7,
+      "area_extent": [
+        -5567708.976847945,
+        -5570487.335542577,
+        5570709.62841187,
+        5567486.803716269
+      ],
+      "method": "Delivered ecCodes lon/lat fit; four construction samples plus three held-out samples; raw data order unchanged"
+    }
+  }
+]

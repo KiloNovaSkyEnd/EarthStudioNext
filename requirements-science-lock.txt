@@ -1,0 +1,20 @@
+# Verified backend versions; update deliberately with real pixel parity checks.
+satpy==0.60.0
+pyresample==1.35.0
+dask==2026.8.0
+numpy==2.5.4
+scipy==1.18.1
+xarray==2026.9.0
+pyorbital==1.14.0
+pyspectral==0.14.3
+rasterio==1.5.2
+pyproj==3.8.0
+trollimage==1.29.0
+trollsift==1.0.2
+netCDF4==1.7.5
+h5py==3.16.0
+psutil==7.2.2
+cupy-cuda12x==14.2.0
+nvidia-cuda-runtime-cu12==12.9.79
+nvidia-cuda-nvrtc-cu12==12.9.86
+imageio-ffmpeg==0.6.0

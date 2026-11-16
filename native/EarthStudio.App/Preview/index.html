@@ -1,0 +1,9 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https://legacy-materials.local; script-src 'self'; style-src 'self'; connect-src 'none'">
+<link rel="stylesheet" href="style.css"><title>Earth Studio Preview</title></head>
+<body><canvas id="globe" aria-label="可拖动旋转和滚轮缩放的天气地球"></canvas>
+<div class="top"><span class="badge">3D 地球预览</span><span id="state">尚未加载卫星处理结果</span></div>
+<div class="bottom"><strong id="time">等待天气素材</strong><span>拖动旋转 · 滚轮缩放 · 双击复位</span>
+<small>灰色表示无数据 · 代理预览不代表原生细节 · 未通过全球验收</small></div>
+<script src="globe.js"></script></body></html>

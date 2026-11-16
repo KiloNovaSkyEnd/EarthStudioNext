@@ -1,0 +1,332 @@
+{
+  "id": "https://api.eumetsat.int/data/search-products/1.0.0/os?pi=EO:EUM:DAT:MSG:HRSEVIRI-IODC&dtstart=2020-10-29T16%3A20%3A00Z&dtend=2020-10-29T17%3A00%3A00Z&c=100&",
+  "type": "FeatureCollection",
+  "totalResults": 3,
+  "itemsPerPage": 100,
+  "startIndex": 0,
+  "queries": {
+    "request": [
+      {
+        "count": 100,
+        "eo:parentIdentifier": "EO:EUM:DAT:MSG:HRSEVIRI-IODC",
+        "time:start": "2020-10-29T16:20:00Z",
+        "time:end": "2020-10-29T17:00:00Z"
+      }
+    ]
+  },
+  "properties": {
+    "type": "Properties",
+    "title": "EUMETSAT EOP OpenSearch (EOPOS) results feed for EO:EUM:DAT:MSG:HRSEVIRI-IODC",
+    "subTitle": "Search results for your query pi=EO:EUM:DAT:MSG:HRSEVIRI-IODC&dtstart=2020-10-29T16%3A20%3A00Z&dtend=2020-10-29T17%3A00%3A00Z&c=100&",
+    "rights": "Copyright",
+    "updated": "2026-10-18T09:06:48.725Z",
+    "subject": "climatologyMeteorologyAtmosphere",
+    "creator": "EUMETSAT",
+    "lang": "en",
+    "parameters": [
+      {
+        "name": "sat",
+        "value": "platformShortName",
+        "title": "Mission / Satellite",
+        "minimum": 0,
+        "options": [
+          {
+            "value": "MSG1",
+            "results": 3
+          }
+        ]
+      },
+      {
+        "name": "type",
+        "value": "productType",
+        "title": "Product Type",
+        "minimum": 0,
+        "options": [
+          {
+            "value": "MSG15",
+            "results": 3
+          }
+        ]
+      },
+      {
+        "name": "dtstart",
+        "value": "start",
+        "title": "Temporal Start",
+        "minimum": 0,
+        "minInclusive": "2020-10-29T16:15:10.453Z",
+        "maxInclusive": "2020-10-29T16:45:10.826Z"
+      },
+      {
+        "name": "dtend",
+        "value": "end",
+        "title": "Temporal End",
+        "minimum": 0,
+        "minInclusive": "2020-10-29T16:27:42.013Z",
+        "maxInclusive": "2020-10-29T16:57:42.385Z"
+      },
+      {
+        "name": "publication",
+        "value": "publicationDate",
+        "title": "publication date",
+        "minimum": 0,
+        "minInclusive": "2021-05-22T20:08:08.992Z",
+        "maxInclusive": "2021-05-22T20:08:19.093Z"
+      }
+    ],
+    "links": {
+      "type": "Links",
+      "search": {
+        "type": "application/opensearchdescription+xml",
+        "href": "https://api.eumetsat.int/data/search-products/1.0.0/osdd?pi=EO:EUM:DAT:MSG:HRSEVIRI-IODC",
+        "title": "OpenSearch Description Document"
+      },
+      "self": {
+        "type": "application/json",
+        "href": "https://api.eumetsat.int/data/search-products/1.0.0/os?pi=EO:EUM:DAT:MSG:HRSEVIRI-IODC&dtstart=2020-10-29T16%3A20%3A00Z&dtend=2020-10-29T17%3A00%3A00Z&c=100&format=json",
+        "title": "this search"
+      },
+      "first": {
+        "type": "application/json",
+        "href": "https://api.eumetsat.int/data/search-products/1.0.0/os?pi=EO:EUM:DAT:MSG:HRSEVIRI-IODC&dtstart=2020-10-29T16%3A20%3A00Z&dtend=2020-10-29T17%3A00%3A00Z&c=100&format=json",
+        "title": "first result page"
+      },
+      "last": {
+        "type": "application/json",
+        "href": "https://api.eumetsat.int/data/search-products/1.0.0/os?pi=EO:EUM:DAT:MSG:HRSEVIRI-IODC&dtstart=2020-10-29T16%3A20%3A00Z&dtend=2020-10-29T17%3A00%3A00Z&si=0&c=100&format=json",
+        "title": "last result page"
+      }
+    },
+    "profiles": [
+      {
+        "href": "http://www.opengis.net/spec/owc-geojson/1.0/req/core"
+      },
+      {
+        "href": "http://www.opengis.net/spec/os-geojson/1.0/req/core"
+      }
+    ]
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "MSG1-SEVI-MSG15-0100-NA-20201029165742.385000000Z-NA",
+      "geometry": {},
+      "properties": {
+        "type": "Properties",
+        "identifier": "MSG1-SEVI-MSG15-0100-NA-20201029165742.385000000Z-NA",
+        "parentIdentifier": "EO:EUM:DAT:MSG:HRSEVIRI-IODC",
+        "title": "MSG1-SEVI-MSG15-0100-NA-20201029165742.385000000Z-NA",
+        "date": "2020-10-29T16:45:10.826Z/2020-10-29T16:57:42.385Z",
+        "updated": "2021-05-22T20:08:19.093134762Z",
+        "acquisitionInformation": [
+          {
+            "platform": {
+              "platformShortName": "MSG1"
+            },
+            "instrument": {
+              "instrumentShortName": "SEVIRI"
+            },
+            "acquisitionParameters": {}
+          }
+        ],
+        "productInformation": {
+          "productType": "MSG15",
+          "size": 140505
+        },
+        "extraInformation": {},
+        "links": {
+          "type": "Links",
+          "data": [
+            {
+              "type": "Link",
+              "href": "https://api.eumetsat.int/data/download/1.0.0/collections/EO%3AEUM%3ADAT%3AMSG%3AHRSEVIRI-IODC/products/MSG1-SEVI-MSG15-0100-NA-20201029165742.385000000Z-NA",
+              "mediaType": "application/zip",
+              "title": "Product download"
+            }
+          ],
+          "alternates": [
+            {
+              "type": "Link",
+              "href": "https://api.eumetsat.int/data/download/1.0.0/collections/EO%3AEUM%3ADAT%3AMSG%3AHRSEVIRI-IODC/products/MSG1-SEVI-MSG15-0100-NA-20201029165742.385000000Z-NA/metadata",
+              "mediaType": "application/xml",
+              "title": "Metadata"
+            },
+            {
+              "type": "Link",
+              "href": "https://api.eumetsat.int/data/download/1.0.0/collections/EO%3AEUM%3ADAT%3AMSG%3AHRSEVIRI-IODC/products/MSG1-SEVI-MSG15-0100-NA-20201029165742.385000000Z-NA/metadata?format=json",
+              "mediaType": "application/json",
+              "title": "Metadata in JSON format"
+            }
+          ],
+          "sip-entries": [
+            {
+              "type": "Link",
+              "href": "https://api.eumetsat.int/data/download/1.0.0/collections/EO%3AEUM%3ADAT%3AMSG%3AHRSEVIRI-IODC/products/MSG1-SEVI-MSG15-0100-NA-20201029165742.385000000Z-NA/entry?name=EOPMetadata.xml",
+              "mediaType": "application/xml",
+              "title": "EOPMetadata.xml"
+            },
+            {
+              "type": "Link",
+              "href": "https://api.eumetsat.int/data/download/1.0.0/collections/EO%3AEUM%3ADAT%3AMSG%3AHRSEVIRI-IODC/products/MSG1-SEVI-MSG15-0100-NA-20201029165742.385000000Z-NA/entry?name=manifest.xml",
+              "mediaType": "application/xml",
+              "title": "manifest.xml"
+            },
+            {
+              "type": "Link",
+              "href": "https://api.eumetsat.int/data/download/1.0.0/collections/EO%3AEUM%3ADAT%3AMSG%3AHRSEVIRI-IODC/products/MSG1-SEVI-MSG15-0100-NA-20201029165742.385000000Z-NA/entry?name=MSG1-SEVI-MSG15-0100-NA-20201029165742.385000000Z-NA.nat",
+              "mediaType": "application/octet-stream",
+              "title": "MSG1-SEVI-MSG15-0100-NA-20201029165742.385000000Z-NA.nat"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MSG1-SEVI-MSG15-0100-NA-20201029164242.199000000Z-NA",
+      "geometry": {},
+      "properties": {
+        "type": "Properties",
+        "identifier": "MSG1-SEVI-MSG15-0100-NA-20201029164242.199000000Z-NA",
+        "parentIdentifier": "EO:EUM:DAT:MSG:HRSEVIRI-IODC",
+        "title": "MSG1-SEVI-MSG15-0100-NA-20201029164242.199000000Z-NA",
+        "date": "2020-10-29T16:30:10.64Z/2020-10-29T16:42:42.199Z",
+        "updated": "2021-05-22T20:08:08.992947Z",
+        "acquisitionInformation": [
+          {
+            "platform": {
+              "platformShortName": "MSG1"
+            },
+            "instrument": {
+              "instrumentShortName": "SEVIRI"
+            },
+            "acquisitionParameters": {}
+          }
+        ],
+        "productInformation": {
+          "productType": "MSG15",
+          "size": 142880
+        },
+        "extraInformation": {},
+        "links": {
+          "type": "Links",
+          "data": [
+            {
+              "type": "Link",
+              "href": "https://api.eumetsat.int/data/download/1.0.0/collections/EO%3AEUM%3ADAT%3AMSG%3AHRSEVIRI-IODC/products/MSG1-SEVI-MSG15-0100-NA-20201029164242.199000000Z-NA",
+              "mediaType": "application/zip",
+              "title": "Product download"
+            }
+          ],
+          "alternates": [
+            {
+              "type": "Link",
+              "href": "https://api.eumetsat.int/data/download/1.0.0/collections/EO%3AEUM%3ADAT%3AMSG%3AHRSEVIRI-IODC/products/MSG1-SEVI-MSG15-0100-NA-20201029164242.199000000Z-NA/metadata",
+              "mediaType": "application/xml",
+              "title": "Metadata"
+            },
+            {
+              "type": "Link",
+              "href": "https://api.eumetsat.int/data/download/1.0.0/collections/EO%3AEUM%3ADAT%3AMSG%3AHRSEVIRI-IODC/products/MSG1-SEVI-MSG15-0100-NA-20201029164242.199000000Z-NA/metadata?format=json",
+              "mediaType": "application/json",
+              "title": "Metadata in JSON format"
+            }
+          ],
+          "sip-entries": [
+            {
+              "type": "Link",
+              "href": "https://api.eumetsat.int/data/download/1.0.0/collections/EO%3AEUM%3ADAT%3AMSG%3AHRSEVIRI-IODC/products/MSG1-SEVI-MSG15-0100-NA-20201029164242.199000000Z-NA/entry?name=MSG1-SEVI-MSG15-0100-NA-20201029164242.199000000Z-NA.nat",
+              "mediaType": "application/octet-stream",
+              "title": "MSG1-SEVI-MSG15-0100-NA-20201029164242.199000000Z-NA.nat"
+            },
+            {
+              "type": "Link",
+              "href": "https://api.eumetsat.int/data/download/1.0.0/collections/EO%3AEUM%3ADAT%3AMSG%3AHRSEVIRI-IODC/products/MSG1-SEVI-MSG15-0100-NA-20201029164242.199000000Z-NA/entry?name=EOPMetadata.xml",
+              "mediaType": "application/xml",
+              "title": "EOPMetadata.xml"
+            },
+            {
+              "type": "Link",
+              "href": "https://api.eumetsat.int/data/download/1.0.0/collections/EO%3AEUM%3ADAT%3AMSG%3AHRSEVIRI-IODC/products/MSG1-SEVI-MSG15-0100-NA-20201029164242.199000000Z-NA/entry?name=manifest.xml",
+              "mediaType": "application/xml",
+              "title": "manifest.xml"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MSG1-SEVI-MSG15-0100-NA-20201029162742.013000000Z-NA",
+      "geometry": {},
+      "properties": {
+        "type": "Properties",
+        "identifier": "MSG1-SEVI-MSG15-0100-NA-20201029162742.013000000Z-NA",
+        "parentIdentifier": "EO:EUM:DAT:MSG:HRSEVIRI-IODC",
+        "title": "MSG1-SEVI-MSG15-0100-NA-20201029162742.013000000Z-NA",
+        "date": "2020-10-29T16:15:10.453Z/2020-10-29T16:27:42.013Z",
+        "updated": "2021-05-22T20:08:14.565780489Z",
+        "acquisitionInformation": [
+          {
+            "platform": {
+              "platformShortName": "MSG1"
+            },
+            "instrument": {
+              "instrumentShortName": "SEVIRI"
+            },
+            "acquisitionParameters": {}
+          }
+        ],
+        "productInformation": {
+          "productType": "MSG15",
+          "size": 145417
+        },
+        "extraInformation": {},
+        "links": {
+          "type": "Links",
+          "data": [
+            {
+              "type": "Link",
+              "href": "https://api.eumetsat.int/data/download/1.0.0/collections/EO%3AEUM%3ADAT%3AMSG%3AHRSEVIRI-IODC/products/MSG1-SEVI-MSG15-0100-NA-20201029162742.013000000Z-NA",
+              "mediaType": "application/zip",
+              "title": "Product download"
+            }
+          ],
+          "alternates": [
+            {
+              "type": "Link",
+              "href": "https://api.eumetsat.int/data/download/1.0.0/collections/EO%3AEUM%3ADAT%3AMSG%3AHRSEVIRI-IODC/products/MSG1-SEVI-MSG15-0100-NA-20201029162742.013000000Z-NA/metadata",
+              "mediaType": "application/xml",
+              "title": "Metadata"
+            },
+            {
+              "type": "Link",
+              "href": "https://api.eumetsat.int/data/download/1.0.0/collections/EO%3AEUM%3ADAT%3AMSG%3AHRSEVIRI-IODC/products/MSG1-SEVI-MSG15-0100-NA-20201029162742.013000000Z-NA/metadata?format=json",
+              "mediaType": "application/json",
+              "title": "Metadata in JSON format"
+            }
+          ],
+          "sip-entries": [
+            {
+              "type": "Link",
+              "href": "https://api.eumetsat.int/data/download/1.0.0/collections/EO%3AEUM%3ADAT%3AMSG%3AHRSEVIRI-IODC/products/MSG1-SEVI-MSG15-0100-NA-20201029162742.013000000Z-NA/entry?name=EOPMetadata.xml",
+              "mediaType": "application/xml",
+              "title": "EOPMetadata.xml"
+            },
+            {
+              "type": "Link",
+              "href": "https://api.eumetsat.int/data/download/1.0.0/collections/EO%3AEUM%3ADAT%3AMSG%3AHRSEVIRI-IODC/products/MSG1-SEVI-MSG15-0100-NA-20201029162742.013000000Z-NA/entry?name=MSG1-SEVI-MSG15-0100-NA-20201029162742.013000000Z-NA.nat",
+              "mediaType": "application/octet-stream",
+              "title": "MSG1-SEVI-MSG15-0100-NA-20201029162742.013000000Z-NA.nat"
+            },
+            {
+              "type": "Link",
+              "href": "https://api.eumetsat.int/data/download/1.0.0/collections/EO%3AEUM%3ADAT%3AMSG%3AHRSEVIRI-IODC/products/MSG1-SEVI-MSG15-0100-NA-20201029162742.013000000Z-NA/entry?name=manifest.xml",
+              "mediaType": "application/xml",
+              "title": "manifest.xml"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

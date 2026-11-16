@@ -1,0 +1,22 @@
+const assert=require('node:assert/strict');
+const {indexAt,annotate,waitVisible}=require('../native/EarthStudio.App/Cesium/weather-clock.js');
+const frames=[{utc:'2026-10-20T14:30:00Z'},{utc:'2026-10-20T14:40:00Z',missing:true},{utc:'2026-10-20T14:50:00Z'}];
+assert.equal(indexAt(frames,'2026-10-20T14:29:59Z'),-1);
+assert.equal(indexAt(frames,'2026-10-20T14:40:00Z'),1);
+assert.equal(indexAt(frames,'2026-10-20T14:49:59Z'),1);
+assert.equal(indexAt(frames,'2026-10-20T14:50:00Z'),2);
+assert.equal(annotate(frames,{timelineUtc:'2026-10-20T14:45:00Z',utc:frames[0].utc}).utc,null);
+assert.equal(annotate(frames,{timelineUtc:'2026-10-20T14:45:00Z'}).observationState,'missing');
+assert.equal(annotate(frames,{timelineUtc:'2026-10-20T14:50:00Z'}).utc,frames[2].utc);
+assert.equal(annotate(frames,{timelineUtc:'2026-10-20T14:39:59Z'}).utc,frames[0].utc);
+assert.equal(indexAt(frames,'invalid'),-1);
+console.log('PASS explicit missing weather boundaries and camera annotation');
+(async()=>{
+ let listener,removed=0;
+ const viewer={scene:{globe:{tilesLoaded:false},postRender:{addEventListener(fn){listener=fn;return ()=>removed++;}},requestRender(){}}};
+ const ready=waitVisible(viewer,()=>true,1000);listener();viewer.scene.globe.tilesLoaded=true;listener();
+ assert.equal(await ready,true);assert.equal(removed,1);
+ const cancelled=waitVisible(viewer,()=>false,1000);listener();assert.equal(await cancelled,false);
+ assert.equal(await waitVisible(viewer,()=>true,5),false);assert.equal(removed,3);
+ console.log('PASS viewport ready, cancellation and timeout cleanup');
+})().catch(error=>{console.error(error);process.exitCode=1;});

@@ -1,0 +1,14 @@
+boto3>=1.34,<2
+eumdac>=3.1,<4
+satpy==0.60.0
+pyresample>=1.31,<2
+pyorbital>=1.10,<2
+pyspectral>=0.14.3,<0.15
+numpy>=1.26,<3
+Pillow>=10,<13
+xarray>=2024.1
+netCDF4>=1.6
+h5py>=3.10
+eccodes>=2.50,<3
+
+streamlit>=1.38,<2

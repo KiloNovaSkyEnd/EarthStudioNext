@@ -1,0 +1,14 @@
+{
+  "schema": "earthstudio.accepted_static_landmask.v1",
+  "purpose": "Retain accepted Satpy nearest land/water reference; nodata255 remains unknown, not inferred ocean.",
+  "files": [
+    {
+      "path": "eee9736ff7b78420e1cc09ca9c27e08508293b524767bdf7be86fe1353d19361.json",
+      "sha256": "441c44b81ef030945a4a87a5091f44cae78c7b5377f75c66e1bddaca61589a1b"
+    },
+    {
+      "path": "eee9736ff7b78420e1cc09ca9c27e08508293b524767bdf7be86fe1353d19361.npy",
+      "sha256": "13eadbe04ebd339deb8ec2e476afd4a2863961676e412e16230015fa57c43806"
+    }
+  ]
+}

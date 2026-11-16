@@ -1,0 +1,8 @@
+sensor_name: visir/ahi
+modifiers:
+  sunz_corrected:
+    modifier: !!python/name:ges.earth_validation.solar_shared.SharedSunZenithCorrector
+    optional_prerequisites: [solar_zenith_angle]
+  sunz_reduced:
+    modifier: !!python/name:ges.earth_validation.solar_shared.SharedSunZenithReducer
+    optional_prerequisites: [solar_zenith_angle]

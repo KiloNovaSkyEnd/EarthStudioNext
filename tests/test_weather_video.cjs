@@ -1,0 +1,15 @@
+const assert=require('node:assert/strict');
+const V=require('../native/EarthStudio.App/Cesium/weather-video.js');
+const C=require('../native/EarthStudio.App/Cesium/contract.js');
+const fs=require('node:fs');
+assert.equal(V.durationForFps(73,12),6);
+assert.equal(V.fpsForDuration(73,20),3.6);
+assert.equal(V.fpsForDuration(73,40),1.8);
+for(const n of [3,73,1000])for(const d of [20,120,86400])assert.ok(Math.abs(V.durationForFps(n,V.fpsForDuration(n,d))-d)<1e-8);
+assert.throws(()=>V.durationForFps(73,0));
+const frames=[{utc:'a'},{utc:'b',missing:true},{utc:'c',missing:true},{utc:'d'}];
+assert.equal(V.displayed(frames,2).observation.utc,'a');assert.equal(V.displayed(frames,3).observation.utc,'d');
+const m=JSON.parse(fs.readFileSync('data/cesium_h9_motion_20261020/manifest.json','utf8'));
+C.validateManifest(m);const bad=structuredClone(m);bad.videoPreview.path='../escape.mp4';assert.throws(()=>C.validateManifest(bad));
+const count=structuredClone(m);count.videoPreview.frames--;assert.throws(()=>C.validateManifest(count));
+console.log('Weather video cadence, gap provenance and local movie boundary checks pass');

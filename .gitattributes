@@ -1,0 +1,2 @@
+# Preserve shipped bytes for scientific hashes and vendored assets.
+* -text

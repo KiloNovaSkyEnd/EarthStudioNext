@@ -1,0 +1,15 @@
+# Keep stock filenames, segment handling, navigation, calibration and masking.
+# Only replace the eager full-count memmap.copy() with bounded original reads.
+file_types:
+  hsd_b01:
+    file_reader: !!python/name:ges.earth_validation.bounded_readers.BoundedAHIHSDFileHandler
+  hsd_b02:
+    file_reader: !!python/name:ges.earth_validation.bounded_readers.BoundedAHIHSDFileHandler
+  hsd_b03:
+    file_reader: !!python/name:ges.earth_validation.bounded_readers.BoundedAHIHSDFileHandler
+  hsd_b04:
+    file_reader: !!python/name:ges.earth_validation.bounded_readers.BoundedAHIHSDFileHandler
+  hsd_b07:
+    file_reader: !!python/name:ges.earth_validation.bounded_readers.BoundedAHIHSDFileHandler
+  hsd_b13:
+    file_reader: !!python/name:ges.earth_validation.bounded_readers.BoundedAHIHSDFileHandler

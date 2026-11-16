@@ -1,0 +1,8 @@
+sensor_name: visir/abi
+composites:
+  geo_color_background_with_low_clouds:
+    prerequisites: [geo_color_low_clouds, _night_background_hires]
+  geo_color_high_clouds:
+    compositor: !!python/name:ges.earth_validation.satpy_execution.BoundedHighCloudCompositor
+  geo_color_low_clouds:
+    compositor: !!python/name:ges.earth_validation.satpy_execution.BoundedLowCloudCompositor

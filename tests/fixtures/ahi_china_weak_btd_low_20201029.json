@@ -1,0 +1,36 @@
+{
+  "source_ir_manifest": "data/raw/himawari8_20201029T164000Z/scene.json",
+  "source_l2_manifest": "data/raw/himawari8_cloud_l2_20201029T164000Z/scene.json",
+  "native_rows": [
+    1628,
+    1692
+  ],
+  "native_columns": [
+    1820,
+    1884
+  ],
+  "nominal_utc": "2020-10-29T16:40:00Z",
+  "LW_SW_units": "K",
+  "pressure_units": "hPa",
+  "weak_supported_pixels": 3844,
+  "sha256": "3311bf8079dd5b0fe55482680dfc75d4cd0ec49897a7653cbce5d7ffd6fd1940",
+  "bytes": 69547,
+  "selection": "Actual targeted China crop with maximum supported low clouds and zero old spectral blue; not independent truth or random accuracy sample",
+  "checked_against_original_files": {
+    "CldTopPres": true,
+    "PcError": true,
+    "CloudHgtQF": true,
+    "Latitude": true,
+    "Longitude": true,
+    "CloudMask": true,
+    "CloudMaskQualFlag": true,
+    "CloudPhase": true,
+    "CloudPhaseFlag": true,
+    "longwave": true,
+    "shortwave": true
+  },
+  "actual_IR_scan_utc": [
+    "2020-10-29T16:40:21.326631Z",
+    "2020-10-29T16:49:41.358953Z"
+  ]
+}

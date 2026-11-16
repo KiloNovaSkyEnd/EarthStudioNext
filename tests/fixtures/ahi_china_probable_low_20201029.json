@@ -1,0 +1,19 @@
+{
+  "source_manifest": "data/raw/himawari8_cloud_l2_20201029T164000Z/scene.json",
+  "ir_manifest": "data/raw/himawari8_20201029T164000Z/scene.json",
+  "utc": "2020-10-29T16:40:21Z",
+  "native_rows": [
+    1212,
+    1276
+  ],
+  "native_columns": [
+    1212,
+    1276
+  ],
+  "selection": "64x64 tile with most probable-mask supported-low spectral candidates in the China bounding box; targeted regression, not random accuracy sample",
+  "sha256": "515263b4f02b5a973ca65db1ca10633ba144d83e830b94b66912f51983f375f3",
+  "bytes": 63884,
+  "supported_probable_spectral_candidates": 3779,
+  "pressure_units": "hPa",
+  "IR_units": "K"
+}

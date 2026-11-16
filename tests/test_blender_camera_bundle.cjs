@@ -1,0 +1,16 @@
+const assert=require('node:assert/strict'),fs=require('node:fs');
+const {prepare}=require('../scripts/prepare_blender_camera_bundle.cjs');
+const project=JSON.parse(fs.readFileSync('reports/user_project_editor_v2_verified.json','utf8'));
+const original=JSON.stringify(project),bundle=prepare(project);
+assert.equal(JSON.stringify(project),original,'export must preserve saved keys and unsaved draft');
+assert.equal(bundle.tracks.length,2);
+assert.equal(bundle.tracks[0].name,bundle.tracks[1].name,'duplicate names are legal');
+assert.notEqual(bundle.tracks[0].keyframeTrack.id,bundle.tracks[1].keyframeTrack.id);
+assert.ok(bundle.tracks.every(t=>t.samples.every(s=>s.utc==='2026-10-20T22:40:00Z')));
+const noWeather=structuredClone(project);noWeather.weather=null;
+assert.ok(prepare(noWeather).tracks.every(t=>t.samples.every(s=>s.utc===null)));
+const moving=structuredClone(project);moving.weather.endUtc='2026-10-20T23:40:00Z';
+assert.ok(prepare(moving).tracks.every(t=>t.samples.every(s=>s.utc===null&&s.timelineUtc)),'requested time must not be invented as observed scan');
+const empty=structuredClone(project);for(const t of empty.tracks)t.keys=[];
+assert.throws(()=>prepare(empty),/没有可导出/);
+console.log('PASS saved project intact, duplicate names/independent IDs, frozen UTC, absent weather, unresolved real scan mapping, empty export.');

@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><OutputType>Exe</OutputType><TargetFramework>net8.0-windows10.0.19041.0</TargetFramework><Nullable>enable</Nullable><ImplicitUsings>enable</ImplicitUsings></PropertyGroup>
+  <ItemGroup>
+    <Compile Include="../EarthStudio.App/Services/QueueMonitor.cs" Link="QueueMonitor.cs" />
+    <Compile Include="../EarthStudio.App/Services/AtomicJsonFile.cs" Link="AtomicJsonFile.cs" />
+    <Compile Include="../EarthStudio.App/Services/PipelineRecovery.cs" Link="PipelineRecovery.cs" />
+    <Compile Include="../EarthStudio.App/Services/PipelineWorkerSupervisor.cs" Link="PipelineWorkerSupervisor.cs" />
+    <Compile Include="../EarthStudio.App/Services/ProductionPowerGuard.cs" Link="ProductionPowerGuard.cs" />
+    <Compile Include="../EarthStudio.App/UI/PipelineStatusText.cs" Link="PipelineStatusText.cs" />
+    <ProjectReference Include="../EarthStudio.Core/EarthStudio.Core.csproj" />
+  </ItemGroup>
+</Project>

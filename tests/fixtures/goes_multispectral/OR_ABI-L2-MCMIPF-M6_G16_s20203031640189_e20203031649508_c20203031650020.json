@@ -1,0 +1,18 @@
+{
+  "source_url": "https://noaa-goes16.s3.amazonaws.com/ABI-L2-MCMIPF/2020/303/16/OR_ABI-L2-MCMIPF-M6_G16_s20203031640189_e20203031649508_c20203031650020.nc",
+  "subset_x": [
+    5089,
+    5217
+  ],
+  "subset_y": [
+    1469,
+    1597
+  ],
+  "bands": [
+    "C07",
+    "C13"
+  ],
+  "raw_packed_values_preserved": true,
+  "sha256": "5c797990334fd7daf9f17ec83190d6f5462be2cd7b4b187597994436fb2c2c82",
+  "bytes": 218948
+}

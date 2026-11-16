@@ -1,0 +1,36 @@
+# User-approved historical exception. This is NOT stock SEVIRI GeoColor.
+# Only band wiring is adapted. Satpy classes, thresholds and enhancements
+# are reused, with no independent pixel colour or day/night implementation.
+sensor_name: visir/seviri
+composites:
+  observed_natural_day_night:
+    compositor: !!python/name:satpy.composites.fill.DayNightCompositor
+    standard_name: geo_color_day_night_blend
+    lim_low: 78
+    lim_high: 88
+    prerequisites: [natural_color, observed_night]
+  observed_high_clouds:
+    compositor: !!python/name:ges.earth_validation.satpy_execution.BoundedHighCloudCompositor
+    standard_name: geo_color_high_clouds
+    prerequisites: [IR_108]
+  observed_low_clouds:
+    compositor: !!python/name:ges.earth_validation.satpy_execution.BoundedLowCloudCompositor
+    standard_name: geo_color_low_clouds
+    values_water: 0
+    values_land: 100
+    prerequisites:
+      - compositor: !!python/name:satpy.composites.arithmetic.DifferenceCompositor
+        prerequisites: [IR_108, IR_039]
+      - IR_108
+      - compositor: !!python/name:satpy.composites.aux_data.StaticImageCompositor
+        standard_name: land_water_mask
+        url: https://zenodo.org/records/10076199/files/gshhs_land_water_mask_3km_i.tif
+        known_hash: sha256:96df83c57416217e191f95dde3d3c1ce0373a8fc220e929228873db246ca3569
+  observed_background_low_clouds:
+    compositor: !!python/name:satpy.composites.fill.BackgroundCompositor
+    standard_name: night_ir_with_background
+    prerequisites: [observed_low_clouds, _night_background_hires]
+  observed_night:
+    compositor: !!python/name:satpy.composites.fill.BackgroundCompositor
+    standard_name: night_ir_with_background
+    prerequisites: [observed_high_clouds, observed_background_low_clouds]

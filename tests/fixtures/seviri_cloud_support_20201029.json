@@ -1,0 +1,18 @@
+{
+  "source_manifest": "data/raw/meteosat_msg4_cloud_l2_20201029T163000Z/scene.json",
+  "utc": "2020-10-29T16:30:00Z/2020-10-29T16:45:00Z",
+  "native_cloud_mask_rows": [
+    256,
+    320
+  ],
+  "native_cloud_mask_columns": [
+    1408,
+    1472
+  ],
+  "low_top_class9_count": 4096,
+  "alignment": "Corrected GRIB lon/lat; 9 km height/quality nearest mapped onto native 3 km cloud mask; no finer height retrieval",
+  "sha256": "a85081c01c77402514d81acbbc65219fced28f81c84a8fa16544e3209d76947f",
+  "bytes": 993,
+  "ground_truth": false,
+  "selection": "targeted low cloud regression tile, not random accuracy sample"
+}

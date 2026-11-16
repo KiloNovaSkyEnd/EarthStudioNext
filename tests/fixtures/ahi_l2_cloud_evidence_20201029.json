@@ -1,0 +1,56 @@
+{
+  "source_manifest": "fixture-source-manifest.json",
+  "source_bucket": "noaa-himawari8",
+  "source_keys": [
+    "AHI-L2-FLDK-Clouds/2020/10/29/1640/Himawari8_AHI_2KM_FLDK_2020303_1640_21_CLOUD_HEIGHT_EN.nc",
+    "AHI-L2-FLDK-Clouds/2020/10/29/1640/Himawari8_AHI_2KM_FLDK_2020303_1640_21_CLOUD_MASK_EN.nc",
+    "AHI-L2-FLDK-Clouds/2020/10/29/1640/Himawari8_AHI_2KM_FLDK_2020303_1640_21_CLOUD_PHASE_EN.nc"
+  ],
+  "crop_locations": [
+    {
+      "name": "EastChinaSea",
+      "x": [
+        1991,
+        2055
+      ],
+      "y": [
+        1183,
+        1247
+      ]
+    },
+    {
+      "name": "SeaOfJapan",
+      "x": [
+        2522,
+        2586
+      ],
+      "y": [
+        806,
+        870
+      ]
+    },
+    {
+      "name": "GoniClouds",
+      "x": [
+        2261,
+        2325
+      ],
+      "y": [
+        1801,
+        1865
+      ]
+    }
+  ],
+  "image_time_utc": "2020-10-29T16:40:21Z",
+  "pressure_and_error_units": "hPa",
+  "phase_quality_singleton_axis_explicitly_selected": true,
+  "sha256": "4c479c8b1d383cede7098f0a744afdfdea4a7ecdd544a5b52950bad1ed8953b2",
+  "bytes": 65656,
+  "class_counts": {
+    "1": 2090,
+    "2": 2959,
+    "3": 917,
+    "4": 2199,
+    "5": 4123
+  }
+}

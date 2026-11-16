@@ -1,0 +1,15 @@
+sensor_name: visir/ahi
+composites:
+  geo_color_night:
+    compositor: !!python/name:ges.earth_validation.cuda_night.CudaNightBackgroundCompositor
+    optional_prerequisites:
+      - name: B13
+      - compositor: !!python/name:satpy.composites.arithmetic.DifferenceCompositor
+        prerequisites:
+          - name: B13
+          - name: B07
+      - compositor: !!python/name:satpy.composites.aux_data.StaticImageCompositor
+        standard_name: land_water_mask
+        url: "https://zenodo.org/records/10076199/files/gshhs_land_water_mask_3km_i.tif"
+        known_hash: "sha256:96df83c57416217e191f95dde3d3c1ce0373a8fc220e929228873db246ca3569"
+      - _night_background_hires

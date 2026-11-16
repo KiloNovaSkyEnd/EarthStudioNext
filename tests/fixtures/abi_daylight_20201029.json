@@ -1,0 +1,20 @@
+{
+  "source_manifest": "data/raw/goes16_20201029T164018Z/scene.json",
+  "source_file": "OR_ABI-L2-MCMIPF-M6_G16_s20203031640189_e20203031649508_c20203031650020.nc",
+  "native_rows": [
+    1162,
+    1194
+  ],
+  "native_columns": [
+    2005,
+    2037
+  ],
+  "scan_start_utc": "2020-10-29T16:40:18.900000+00:00",
+  "scan_end_utc": "2020-10-29T16:49:50.800000+00:00",
+  "reflectance_units": "dimensionless measured reflectance factor, not percent",
+  "DQF_good_pixel_value": 0,
+  "solar_angles": "computed from actual scan endpoints/midpoint; not measured",
+  "sha256": "17ac2a80698981e00a11ea29db1d0ddae240feb8aaae98ddd3a620aa73f1ac1f",
+  "bytes": 23248,
+  "selection": "32x32 authentic ABI native crop near 90W,30N; not independent cloud truth"
+}

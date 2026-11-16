@@ -1,0 +1,19 @@
+{
+  "source_file": "OR_ABI-L2-MCMIPF-M6_G16_s20203031640189_e20203031649508_c20203031650020.nc",
+  "native_rows": [
+    3349,
+    3381
+  ],
+  "native_columns": [
+    2888,
+    2920
+  ],
+  "selection": "Authentic DQF2 blue reflectance at cold C13 cloud; rejected VIS is NOT promoted to good; measured IR fallback is separately labeled",
+  "reflectance_units": "fraction",
+  "C13_units": "K",
+  "sha256": "b60865a0ada857ef4af11de39707254df1e21e23cb745a4faaa0dc09c2a378a8",
+  "bytes": 14023,
+  "scan_start_utc": "2020-10-29T16:40:18.900000Z",
+  "scan_end_utc": "2020-10-29T16:49:50.800000Z",
+  "is_independent_cloud_truth": false
+}

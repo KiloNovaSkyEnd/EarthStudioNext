@@ -1,0 +1,13 @@
+{
+  "original_key": "ABI-L2-MCMIPF/2020/303/16/OR_ABI-L2-MCMIPF-M6_G16_s20203031640189_e20203031649508_c20203031650020.nc",
+  "retrieved_utc_date": "2026-10-18",
+  "subset_x": [
+    5089,
+    5217
+  ],
+  "subset_y": [
+    1469,
+    1597
+  ],
+  "note": "Raw packed values and metadata copied; no synthesized pixels."
+}
