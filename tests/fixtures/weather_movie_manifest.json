@@ -1,0 +1,57 @@
+{
+  "schema": "earthstudio.materials.v1",
+  "earthModel": "WGS84",
+  "scope": "regional",
+  "frames": [
+    {
+      "utc": "2026-10-20T22:40:00Z",
+      "source": "AHI",
+      "recipe": "geo_color",
+      "detail": "bounded-sample",
+      "kind": "single-image",
+      "bounds": [
+        120,
+        10,
+        140,
+        30
+      ],
+      "path": "sample.png",
+      "previewPath": "sample.png",
+      "previewBounds": [
+        -180,
+        -90,
+        180,
+        90
+      ]
+    },
+    {
+      "utc": "2026-10-20T22:50:00Z",
+      "source": "AHI",
+      "recipe": "geo_color",
+      "detail": "bounded-sample",
+      "kind": "single-image",
+      "bounds": [
+        120,
+        10,
+        140,
+        30
+      ],
+      "path": "sample.png",
+      "previewPath": "sample.png",
+      "previewBounds": [
+        -180,
+        -90,
+        180,
+        90
+      ]
+    }
+  ],
+  "videoPreview": {
+    "path": "clouds.mp4",
+    "frames": 2,
+    "fps": 12,
+    "lastFrameTime": 0.08333333333333333,
+    "bytes": 42,
+    "gapPolicy": "hold-last-labeled"
+  }
+}

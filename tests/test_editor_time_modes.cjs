@@ -1,7 +1,7 @@
 const assert=require('node:assert/strict'),fs=require('node:fs');
 const T=require('../native/EarthStudio.App/Cesium/timeline.js'),S=require('../native/EarthStudio.App/Cesium/shots.js');
 const M=require('../native/EarthStudio.App/Cesium/montage.js'),B=require('../native/EarthStudio.App/Cesium/storyboard.js'),F=require('../native/EarthStudio.App/Cesium/frame-mapping.js');
-const p=JSON.parse(fs.readFileSync('reports/m6_continuity/fixture_storyboard_bundle.json')).timelineProject;
+const p=JSON.parse(fs.readFileSync('tests/fixtures/storyboard_timeline.json'));
 p.fps=24;p.sourcePlayback={mode:'sequence',intervalSeconds:600};p.weather={startUtc:'2026-10-20T00:00:00Z',endUtc:'2026-10-30T00:00:00Z'};
 for(const t of p.tracks){delete t.clip;t.weather={...p.weather};}
 const [a,b,c]=p.tracks.map(t=>t.id),origin=Date.parse(p.weather.startUtc);
@@ -15,7 +15,7 @@ const keys=structuredClone(q.tracks[0].keys);q=M.trim(q,a,1,3,T,S);assert.deepEq
 const first=M.locate(q,0,T);assert.equal(first.sourceFrame,24);assert.equal(first.id,a);
 const next=M.locate(q,48,T);assert.equal(next.id,b);assert.equal(next.sourceFrame,0);
 assert.throws(()=>M.trim(q,a,3,1,T,S));assert.throws(()=>M.trim(q,a,-1,3,T,S));
-const changed=M.changeFps(q,30,T,S);assert.deepEqual(changed.tracks[0].clip,{inFrame:30,outFrame:90});assert.deepEqual(changed.tracks[0].keys,keys);
+const changed=M.changeFps(q,30,T,S,"seconds");assert.deepEqual(changed.tracks[0].clip,{inFrame:30,outFrame:90});assert.deepEqual(changed.tracks[0].keys,keys);
 assert.equal(T.isSequence(changed,b),false);
 const frames=Array.from({length:1500},(_,n)=>({utc:new Date(origin+n*600000).toISOString(),previewPath:`${n}.jpg`,missing:n===25}));
 const proof=F.receipt(q,frames,T,M,true);assert.equal(proof.frames[0].scanIndex,24);assert.equal(proof.frames[1].state,'missing');assert.equal(proof.frames[1].actualUtc,frames[24].utc);assert.equal(proof.frames[1].held,true);

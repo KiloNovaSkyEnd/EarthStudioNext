@@ -1,7 +1,7 @@
 const assert=require('node:assert/strict'),fs=require('node:fs');
 const C=Function(fs.readFileSync('native/EarthStudio.App/Cesium/vendor/Cesium.js','utf8')+';return Cesium;')();
 const T=require('../native/EarthStudio.App/Cesium/timeline.js'),S=require('../native/EarthStudio.App/Cesium/shots.js');
-const p=JSON.parse(fs.readFileSync('reports/m6_continuity/fixture_storyboard_bundle.json')).timelineProject;
+const p=JSON.parse(fs.readFileSync('tests/fixtures/storyboard_timeline.json'));
 p.fps=24;p.sourcePlayback={mode:'sequence',intervalSeconds:600};
 p.weather={startUtc:'2026-10-20T13:00:00Z',endUtc:'2026-10-30T13:00:00Z'};
 for(const track of p.tracks)track.weather={startUtc:p.weather.startUtc,endUtc:p.weather.endUtc};

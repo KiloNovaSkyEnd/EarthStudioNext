@@ -1,6 +1,6 @@
 const assert=require('node:assert/strict'),fs=require('node:fs');
 const {prepare}=require('../scripts/prepare_blender_camera_bundle.cjs');
-const project=JSON.parse(fs.readFileSync('reports/user_project_editor_v2_verified.json','utf8'));
+const project=JSON.parse(fs.readFileSync('tests/fixtures/camera_timeline.json','utf8'));
 const original=JSON.stringify(project),bundle=prepare(project);
 assert.equal(JSON.stringify(project),original,'export must preserve saved keys and unsaved draft');
 assert.equal(bundle.tracks.length,2);
