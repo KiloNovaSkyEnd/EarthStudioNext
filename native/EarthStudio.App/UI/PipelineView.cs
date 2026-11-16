@@ -102,7 +102,22 @@ sealed class PipelineView
     public void LoadNightSetting()
     {
         var file=Path.Combine(AppPaths.UserData,"night_reference.json");
-        if(!File.Exists(file)){nightStatus.Text="尚未配置共享夜景参考，请选择完整的全球VRT。";return;}
+        if (!File.Exists(file))
+        {
+            var root = AppPaths.FindEngineRoot() ?? AppContext.BaseDirectory;
+            var directory = Path.Combine(root, "resources", "references", "blackmarble_2016_500m");
+            var reference = Path.Combine(directory, "global_500m.vrt");
+            if (File.Exists(reference) && Directory.EnumerateFiles(directory, "BlackMarble_2016_*_geo.tif").Count() == 8)
+            {
+                nightPath.Text = reference;
+                nightStatus.Text = "已找到随包夜景资源，制作前会自动验证。";
+            }
+            else
+            {
+                nightStatus.Text = "请解压两个夜景资源包，或选择完整的全球VRT。";
+            }
+            return;
+        }
         try
         {
             using var document=JsonDocument.Parse(File.ReadAllText(file));

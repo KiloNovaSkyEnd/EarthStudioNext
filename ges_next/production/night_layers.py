@@ -11,7 +11,10 @@ def gpu_python():
     configured=os.environ.get('EARTHSTUDIO_AIVIS_PYTHON')
     if configured:return Path(configured)
     bundled=root/'Runtime/GpuSlot/GpuSlot.exe'
-    if bundled.is_file():return bundled
+    if bundled.is_file():
+        if not (root/'Runtime/AI/python.exe').is_file():
+            raise ValueError('请将 AI-VIS 运行时资源包解压到软件目录。')
+        return bundled
     config=root/'resources/models/aivis/runtime.json'
     if not config.exists():raise ValueError('AI-VIS运行环境未配置；不能回退为GeoColor')
     return Path(json.loads(config.read_text(encoding='utf-8'))['python'])

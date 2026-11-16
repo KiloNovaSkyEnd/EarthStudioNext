@@ -32,4 +32,6 @@ dotnet publish native/EarthStudio.App/EarthStudio.App.csproj -c Release -r win-x
 
 目录查询与素材制作是不同阶段。当前桌面制作队列支持 Himawari-9 单星 11K JPEG。部分观测可能缺失，单星圆盘覆盖随观测几何变化。AI-VIS 用红外数据推算夜间可见光外观。Blender 渲染队列界面可生成任务清单，自动执行仍在开发。不同硬件上的全流程产出和长时间 4K 序列尚待验证。
 
+解压后可运行 `Runtime/Python/python.exe tools/check_release.py` 检查科学依赖和两套夜景网格。已解压 Blender 或 AI-VIS 包时，可分别加上 `--blender` 或 `--ai`。
+
 第三方资源来源和许可见 [THIRD-PARTY.md](THIRD-PARTY.md)。
