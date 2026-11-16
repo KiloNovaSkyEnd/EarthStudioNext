@@ -7,7 +7,7 @@
 1. 打开 [GitHub Releases](https://github.com/KiloNovaSkyEnd/EarthStudioNext/releases/tag/v0.1.0-m18)，下载 `EarthStudioNext-Windows-x64.zip`，解压到可写文件夹，例如 `C:\EarthStudioNext`。
 2. 要制作卫星天气素材，把两个 `EarthStudioNext-NightReference-*.zip` 都解压到同一个文件夹。接受目录合并。两包共约 2.4 GB，解压后会补齐应用内 `resources\references\blackmarble_2016_500m` 下的八个 NASA 夜景瓦片。
 3. 要导出或校验 Blender 项目，把 `EarthStudioNext-Blender-win-x64.zip` 解压到同一文件夹。应用也能使用标准路径安装的 Blender，或通过 `EARTHSTUDIO_BLENDER` 指向已有的 `blender.exe`。
-4. 要启用 AI-VIS 和 AI-VIS+IR，把 `EarthStudioNext-AI-VIS-win-x64.zip` 解压到同一文件夹，并使用支持 CUDA 的 NVIDIA 显卡和兼容驱动。默认 GeoColor 不依赖此附加包。
+4. 要启用 AI-VIS 和 AI-VIS+IR，把三份 `EarthStudioNext-AI-VIS-win-x64-*.zip` 都解压到同一文件夹，并使用支持 CUDA 的 NVIDIA 显卡和兼容驱动。默认 GeoColor 不依赖此附加包。
 5. 双击 `EarthStudio.App.exe`。桌面程序内置 .NET、WinUI、科学 Python 以及 Cesium。编辑预览使用 Windows 的 [Microsoft Edge WebView2 Runtime](https://developer.microsoft.com/microsoft-edge/webview2/)。
 6. 在软件中另选可写的数据目录，然后按顺序创建项目、选择 UTC 范围、查询与预检、生成制作队列。所选时间的原始卫星观测会按需联网下载，单次制作可能需要大量磁盘空间。
 
